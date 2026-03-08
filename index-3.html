@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nwokolo Chioma Vivian — Content Writer & Copywriter</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #FAF7F2;
+  color: #1A1410;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  background: #1A1410;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-name {
+  color: #FAF7F2;
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a {
+  color: #C9A84C;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+.nav-links a:hover { opacity: 0.6; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  background: #1A1410;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-text {
+  position: absolute;
+  font-size: clamp(8rem, 25vw, 22rem);
+  font-weight: 900;
+  color: rgba(255,255,255,0.02);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #B85C38;
+  border: 1px solid rgba(184,92,56,0.35);
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #FAF7F2;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 .line2 {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+  color: #B85C38;
+  font-size: clamp(2.5rem, 9vw, 7rem);
+}
+
+.hero-rule {
+  width: 1px;
+  height: 60px;
+  background: rgba(184,92,56,0.5);
+  margin: 2.5rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tagline {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-style: italic;
+  color: rgba(250,247,242,0.55);
+  max-width: 440px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.hero-quote-box {
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(184,92,56,0.3);
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.hero-quote-box p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: rgba(250,247,242,0.8);
+  line-height: 1.7;
+}
+.hero-quote-box span {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #B85C38;
+}
+
+.hero-btns {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 2.2rem;
+  transition: all 0.3s;
+}
+.btn-light { background: #FAF7F2; color: #1A1410; }
+.btn-light:hover { background: #B85C38; color: white; }
+.btn-ghost { border: 1px solid rgba(250,247,242,0.3); color: rgba(250,247,242,0.7); }
+.btn-ghost:hover { border-color: #B85C38; color: #B85C38; }
+
+/* ── MARQUEE ── */
+.marquee {
+  background: #B85C38;
+  padding: 0.85rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+.marquee-track span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.85);
+  padding: 0 2rem;
+}
+.marquee-track .dot { color: #1A1410; padding: 0; font-size: 0.8rem; opacity: 1; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── ABOUT ── */
+.about {
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+.about-left {}
+.section-num {
+  font-family: 'Courier New', monospace;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(184,92,56,0.08);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.section-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #B85C38;
+}
+.about-right h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+.about-right p {
+  font-size: 1.05rem;
+  color: #5C4F42;
+  line-height: 1.9;
+  margin-bottom: 1.3rem;
+}
+.about-right p strong { color: #1A1410; }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid #C4B9A8;
+  padding: 0.4rem 0.9rem;
+  color: #5C4F42;
+  transition: all 0.3s;
+}
+.tag:hover { background: #1A1410; border-color: #1A1410; color: #FAF7F2; }
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4C9B8, transparent);
+  margin: 0 2.5rem;
+}
+
+/* ── WORK ── */
+.work {
+  padding: 6rem 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.work-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.work-top h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+.work-top h2 em { font-style: italic; font-weight: 300; color: #B85C38; display: block; }
+.work-count {
+  font-family: 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  color: #8C7B6B;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2px;
+  background: #E8E0D4;
+}
+.card {
+  background: #FAF7F2;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: #1A1410;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-height: 300px;
+  transition: all 0.35s;
+  border-bottom: 3px solid transparent;
+}
+.card:hover {
+  background: #1A1410;
+  color: #FAF7F2;
+  border-bottom-color: #B85C38;
+}
+.card-num {
+  font-family: 'Courier New', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.35em;
+  opacity: 0.3;
+}
+.card-type {
+  font-family: 'Courier New', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #B85C38;
+  background: rgba(184,92,56,0.08);
+  padding: 0.3rem 0.8rem;
+  display: inline-block;
+  width: fit-content;
+}
+.card h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: auto;
+}
+.card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  opacity: 0.65;
+}
+.card-arrow {
+  font-size: 1.1rem;
+  color: #B85C38;
+  margin-top: auto;
+  display: block;
+}
+
+/* ── FEATURED ── */
+.featured {
+  background: #1A1410;
+  padding: 6rem 2.5rem;
+}
+.featured-inner { max-width: 860px; margin: 0 auto; }
+.featured-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+.featured h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: #FAF7F2;
+  margin: 1rem 0 1.5rem;
+}
+.featured p {
+  font-size: 1rem;
+  color: rgba(250,247,242,0.5);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.featured .section-label { color: rgba(184,92,56,0.8); }
+.btn-sienna {
+  background: #B85C38;
+  color: white;
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 2.2rem;
+  transition: opacity 0.3s;
+}
+.btn-sienna:hover { opacity: 0.8; }
+
+.featured-list {}
+.featured-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(250,247,242,0.08);
+  text-decoration: none;
+  color: #FAF7F2;
+  gap: 1rem;
+  transition: padding-left 0.3s;
+}
+.featured-item:first-child { border-top: 1px solid rgba(250,247,242,0.08); }
+.featured-item:hover { padding-left: 0.8rem; }
+.fi-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #B85C38;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.fi-title { font-size: 1rem; font-weight: 600; color: rgba(250,247,242,0.85); }
+.fi-arrow { color: #B85C38; font-size: 1rem; flex-shrink: 0; }
+
+/* ── CONTACT ── */
+.contact {
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.contact h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 1rem 0 1.5rem;
+}
+.contact h2 em { font-style: italic; font-weight: 300; color: #B85C38; }
+.contact-desc {
+  font-size: 1.05rem;
+  color: #5C4F42;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 480px;
+}
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 1.8rem;
+  background: #F0EBE2;
+  text-decoration: none;
+  color: #1A1410;
+  border-left: 3px solid transparent;
+  transition: all 0.3s;
+}
+.contact-link:hover { border-left-color: #B85C38; padding-left: 2.5rem; background: #EAE3D8; }
+.contact-icon {
+  width: 40px; height: 40px;
+  background: #B85C38;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.contact-link h4 {
+  font-family: 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: #1A1410;
+}
+.contact-link p { font-size: 0.9rem; color: #6B5E52; }
+
+/* ── FOOTER ── */
+footer {
+  background: #1A1410;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.f-name { font-style: italic; font-size: 1.05rem; color: #FAF7F2; }
+.f-copy {
+  font-family: 'Courier New', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.15em;
+  color: rgba(250,247,242,0.25);
+  text-transform: uppercase;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .about { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-left { display: flex; align-items: center; gap: 1.5rem; }
+  .section-num { font-size: 3rem; margin: 0; }
+  .featured-top { grid-template-columns: 1fr; gap: 2rem; }
+  nav { padding: 1rem 1.5rem; }
+  .work, .about, .contact, .featured { padding: 4rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Nwokolo Chioma Vivian</div>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">NCV</div>
+  <div class="hero-tag">Content Writer &amp; Copywriter</div>
+  <h1>Nwokolo<span class="line2">Chioma Vivian</span></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-tagline">Words that move people — from first glance to final click.</p>
+  <div class="hero-quote-box">
+    <p>Great copy doesn't just sell. It makes people feel understood.</p>
+    <span>— Nwokolo Chioma Vivian</span>
+  </div>
+  <div class="hero-btns">
+    <a href="#work" class="btn btn-light">View My Work</a>
+    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Content Writing</span><span class="dot">·</span>
+    <span>Ad Copy</span><span class="dot">·</span>
+    <span>Direct Response</span><span class="dot">·</span>
+    <span>Email Marketing</span><span class="dot">·</span>
+    <span>Script Writing</span><span class="dot">·</span>
+    <span>Brand Storytelling</span><span class="dot">·</span>
+    <span>Content Writing</span><span class="dot">·</span>
+    <span>Ad Copy</span><span class="dot">·</span>
+    <span>Direct Response</span><span class="dot">·</span>
+    <span>Email Marketing</span><span class="dot">·</span>
+    <span>Script Writing</span><span class="dot">·</span>
+    <span>Brand Storytelling</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-left">
+    <div class="section-num">01</div>
+    <div class="section-label">About</div>
+  </div>
+  <div class="about-right">
+    <h2>The writer behind the words</h2>
+    <p>I'm Nwokolo Chioma Vivian — a content writer and direct-response copywriter who helps brands <strong>say the right thing, to the right people, at exactly the right moment.</strong></p>
+    <p>My work lives at the intersection of storytelling and strategy. Whether it's an ad script that stops the scroll, an email sequence that nurtures trust, or a brand narrative that feels effortlessly human — I craft copy that connects and converts.</p>
+    <p>I write for brands that care about <strong>clarity, authenticity, and results.</strong></p>
+    <div class="tags">
+      <span class="tag">Ad Scripts</span>
+      <span class="tag">Email Copy</span>
+      <span class="tag">Direct Response</span>
+      <span class="tag">Brand Voice</span>
+      <span class="tag">Short Story</span>
+      <span class="tag">Product Copy</span>
+      <span class="tag">Content Strategy</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="work-top">
+    <div>
+      <div class="section-label">Portfolio</div>
+      <h2>Selected<br><em>Work</em></h2>
+    </div>
+    <span class="work-count">06 Pieces</span>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="https://chiomaanwokolo.medium.com/ad-script-d9c79c2a0262" target="_blank">
+      <div class="card-num">01</div>
+      <span class="card-type">Ad Script</span>
+      <h3>Ad Script</h3>
+      <p>A compelling advertising script crafted to capture attention and drive action from the very first frame.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+    <a class="card" href="https://docs.google.com/document/d/1yNnqvRClZqoM_evzS5YEAcGVI-hoy7bbMxjCUSOfieA/edit?usp=drivesdk" target="_blank">
+      <div class="card-num">02</div>
+      <span class="card-type">Script Writing</span>
+      <h3>Short Story Script</h3>
+      <p>A narrative script that brings characters and emotion to life through purposeful, cinematic dialogue.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+    <a class="card" href="https://chiomaanwokolo.medium.com/stay-free-63550997a2e6" target="_blank">
+      <div class="card-num">03</div>
+      <span class="card-type">Content Writing</span>
+      <h3>StayFree App</h3>
+      <p>Long-form content for the StayFree app — balancing product value with storytelling that resonates.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+    <a class="card" href="https://docs.google.com/document/d/1tRdfwre7RcB9QnXQNzB9mwxJDUbT3Ehh1Rsi7JWR6c4/edit?usp=drivesdk" target="_blank">
+      <div class="card-num">04</div>
+      <span class="card-type">Direct Response</span>
+      <h3>Direct Response Copy</h3>
+      <p>Sales copy engineered for conversion — speaking directly to reader desires and moving them to act.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+    <a class="card" href="https://docs.google.com/document/d/1Qj9W4iV6zb70MA4FEKZfmYWvX4VTZh8swiHIf7j8bjA/edit?usp=drivesdk" target="_blank">
+      <div class="card-num">05</div>
+      <span class="card-type">Email Marketing</span>
+      <h3>Email Copy</h3>
+      <p>Email sequences built to nurture, engage, and convert — with subject lines people actually want to open.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+    <a class="card" href="https://chiomaanwokolo.medium.com/chaos-to-clarity-notion-1890ad73db80" target="_blank">
+      <div class="card-num">06</div>
+      <span class="card-type">Content Writing</span>
+      <h3>Chaos to Clarity — Notion</h3>
+      <p>A Notion productivity piece that transforms overwhelm into actionable systems — written with voice and clarity.</p>
+      <span class="card-arrow">&#8599;</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="featured-top">
+      <div>
+        <div class="section-label">On Medium</div>
+        <h2>Featured Writing</h2>
+        <p>Beyond client work, I write essays and pieces that explore productivity, creativity, and the craft of communication.</p>
+        <a href="https://chiomaanwokolo.medium.com" class="btn-sienna" target="_blank">Read on Medium</a>
+      </div>
+      <div class="featured-list">
+        <a class="featured-item" href="https://chiomaanwokolo.medium.com/ad-script-d9c79c2a0262" target="_blank">
+          <div><span class="fi-label">Ad Copywriting</span><span class="fi-title">Ad Script</span></div>
+          <span class="fi-arrow">&#8599;</span>
+        </a>
+        <a class="featured-item" href="https://chiomaanwokolo.medium.com/stay-free-63550997a2e6" target="_blank">
+          <div><span class="fi-label">App Content</span><span class="fi-title">StayFree — A Digital Wellbeing Story</span></div>
+          <span class="fi-arrow">&#8599;</span>
+        </a>
+        <a class="featured-item" href="https://chiomaanwokolo.medium.com/chaos-to-clarity-notion-1890ad73db80" target="_blank">
+          <div><span class="fi-label">Productivity</span><span class="fi-title">Chaos to Clarity — Notion</span></div>
+          <span class="fi-arrow">&#8599;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Let's Talk</div>
+  <h2>Ready to work <em>together?</em></h2>
+  <p class="contact-desc">Whether you need a full campaign, a single piece of copy, or a long-term content partner — I'd love to hear about your project.</p>
+  <div class="contact-links">
+    <a href="https://chiomaanwokolo.medium.com" class="contact-link" target="_blank">
+      <div class="contact-icon">M</div>
+      <div><h4>Medium</h4><p>Read my published writing</p></div>
+    </a>
+    <a href="https://docs.google.com/document/d/1tRdfwre7RcB9QnXQNzB9mwxJDUbT3Ehh1Rsi7JWR6c4/edit?usp=drivesdk" class="contact-link" target="_blank">
+      <div class="contact-icon">&#8599;</div>
+      <div><h4>Sample Work</h4><p>View direct response copy</p></div>
+    </a>
+    <a href="mailto:hello@nwokolochiomaviivian.com" class="contact-link">
+      <div class="contact-icon">@</div>
+      <div><h4>Email Me</h4><p>Get in touch for collaborations</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-name">Nwokolo Chioma Vivian</span>
+  <span class="f-copy">&#169; 2025 — Content Writer &amp; Copywriter</span>
+</footer>
+
+</body>
+</html>
